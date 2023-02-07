@@ -1,2 +1,2 @@
 # militTransfer1
-SDPP CS-22
+SDGP CS-22
