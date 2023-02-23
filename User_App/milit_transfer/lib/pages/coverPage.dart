@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:milit_transfer/pages/selectionPage.dart';
+import 'package:milit_transfer/pages/loginPage.dart';
 
 void main() {
   runApp(const MaterialApp(
+    // theme: ThemeData.dark().primaryColor.,
     title: 'navigation',
     home: CoverPage(),
   ));
@@ -37,7 +39,7 @@ class _CoverPageState extends State<CoverPage> {
             onPressed: () {
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => const SelectionPage()),
+                MaterialPageRoute(builder: (context) => LoginPage()),
               );
             },
             child: Image(
