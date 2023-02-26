@@ -42,6 +42,9 @@ flutter:
     - family: ErasBod
       fonts:
         - asset: fonts/ErasBoldITC.ttf
+    - family: firaCode
+      fonts:
+        - asset: fonts/FiraCode-VariableFont_wght.ttf
   #       - asset: fonts/Schyler-Italic.ttf
   #         style: italic
   #   - family: Trajan Pro

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-// import 'package:milit_transfer/pages/decode.dart';
+//import 'package:milit_transfer/pages/decode.dart';
 // import 'package:milit_transfer/pages/encode.dart';
 
 // void main() {
@@ -20,6 +20,19 @@ class _SelectionPageState extends State<SelectionPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: Text(
+          'militTransfer',
+          style: TextStyle(
+            fontFamily: 'ErasBod',
+            fontSize: 30.0,
+            fontWeight: FontWeight.bold,
+            color: Colors.white,
+          ),
+        ),
+        centerTitle: true,
+        backgroundColor: Colors.black54, //should work with primary color
+      ),
       backgroundColor: Color(0xFF0A0E21),
       body: SafeArea(
         child: SingleChildScrollView(

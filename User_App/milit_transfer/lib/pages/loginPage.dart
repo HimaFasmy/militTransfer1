@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:milit_transfer/pages/aboutPage.dart';
+import 'package:milit_transfer/pages/selectionPage.dart';
 
 // void main() {
 //   runApp(const MaterialApp(
@@ -20,7 +22,7 @@ class _LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.black,
+      backgroundColor: Color(0xFF23242C),
       appBar: AppBar(
         title: Text(
           'militTransfer',
@@ -32,7 +34,7 @@ class _LoginPageState extends State<LoginPage> {
           ),
         ),
         centerTitle: true,
-        backgroundColor: Colors.black54, //should work with primary color
+        backgroundColor: Colors.black, //should work with primary color
       ),
       body: SafeArea(
         child: SingleChildScrollView(
@@ -165,7 +167,11 @@ class _LoginPageState extends State<LoginPage> {
                           ),
                           //clipBehavior: Color.alphaBlend(Colors.black, Colors.blue),
                           onPressed: () {
-                            // Respond to button press
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => AboutPage()),
+                            );
                           },
                           child: Text('Login'),
                         ),
