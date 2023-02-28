@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:milit_transfer/pages/aboutPage.dart';
+//import 'package:milit_transfer/pages/aboutPage.dart';
 import 'package:milit_transfer/pages/selectionPage.dart';
+import 'package:milit_transfer/colors/colors.dart';
+import 'package:milit_transfer/font/font.dart';
 
 // void main() {
 //   runApp(const MaterialApp(
@@ -22,7 +24,7 @@ class _LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xFF23242C),
+      backgroundColor: AppColor.backroundColor,
       appBar: AppBar(
         title: Text(
           'militTransfer',
@@ -61,7 +63,7 @@ class _LoginPageState extends State<LoginPage> {
                     fontFamily: 'fira code',
                     fontSize: 16,
                     fontWeight: FontWeight.w600,
-                    color: Colors.white,
+                    color: AppColor.buttonTextColor,
                   ),
                 ),
               ),
@@ -76,7 +78,7 @@ class _LoginPageState extends State<LoginPage> {
                         padding:
                             EdgeInsets.symmetric(horizontal: 40, vertical: 20),
                         child: TextFormField(
-                          cursorColor: Colors.blue,
+                          cursorColor: AppColor.cursorColor,
                           validator: (value) {
                             if (value!.isEmpty) {
                               return "Please enter Username";
@@ -89,7 +91,9 @@ class _LoginPageState extends State<LoginPage> {
                           decoration: const InputDecoration(
                             enabledBorder: OutlineInputBorder(
                               borderSide: BorderSide(
-                                  width: 1, color: Colors.greenAccent),
+                                width: 1,
+                                color: Color(0xFF5FE6A3),
+                              ),
                               //borderRadius: BorderRadius.circular(50.0),
                             ),
                             focusedBorder: OutlineInputBorder(
@@ -170,10 +174,12 @@ class _LoginPageState extends State<LoginPage> {
                             Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) => AboutPage()),
+                                  builder: (context) => SelectionPage()),
                             );
                           },
-                          child: Text('Login'),
+                          child: Text(
+                            'Login',
+                          ),
                         ),
                       ),
                     ),

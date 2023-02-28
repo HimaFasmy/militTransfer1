@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:milit_transfer/colors/colors.dart';
+import 'package:milit_transfer/font/font.dart';
 
 class AboutPage extends StatelessWidget {
   const AboutPage({Key? key}) : super(key: key);
@@ -6,7 +8,7 @@ class AboutPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xFF23242C),
+      backgroundColor: AppColor.backroundColor,
       appBar: AppBar(
         title: Text(
           'militTransfer',

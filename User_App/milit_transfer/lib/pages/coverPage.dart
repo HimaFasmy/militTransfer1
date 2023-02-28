@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-//import 'package:milit_transfer/pages/selectionPage.dart';
 import 'package:milit_transfer/pages/loginPage.dart';
-import 'package:milit_transfer/pages/aboutPage1.dart';
+import 'package:milit_transfer/colors/colors.dart';
+import 'package:milit_transfer/font/font.dart';
+//import 'package:milit_transfer/pages/aboutPage1.dart';
 
 void main() {
   runApp(
@@ -24,21 +25,11 @@ class _CoverPageState extends State<CoverPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xFF23242C),
+      backgroundColor: AppColor.backroundColor,
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            // Text(
-            //   "militTransfer",
-            //   style: TextStyle(
-            //     fontFamily: 'ErasBod',
-            //     fontSize: 32.0,
-            //     fontWeight: FontWeight.bold,
-            //     color: Colors.white,
-            //   ),
-            // ),
-            // SizedBox(height: 70.0),
             Container(
               width: 700,
               height: 864,
@@ -46,7 +37,7 @@ class _CoverPageState extends State<CoverPage> {
                 onPressed: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => SelectionPage()),
+                    MaterialPageRoute(builder: (context) => LoginPage()),
                   );
                 },
                 child: Image(

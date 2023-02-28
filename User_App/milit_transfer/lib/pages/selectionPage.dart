@@ -1,25 +1,24 @@
 import 'package:flutter/material.dart';
-//import 'package:milit_transfer/pages/decode.dart';
-// import 'package:milit_transfer/pages/encode.dart';
-
-// void main() {
-//   runApp(const MaterialApp(
-//     title: 'navigation',
-//     home: SelectionPage(),
-//   ));
-// }
+import 'package:milit_transfer/pages/encode.dart';
+import 'package:milit_transfer/pages/aboutPage.dart';
+import 'package:milit_transfer/colors/colors.dart';
+import 'package:milit_transfer/font/font.dart';
 
 class SelectionPage extends StatefulWidget {
-  //const SelectionPage({Key? key}) : super(key: key);
+  const SelectionPage({Key? key}) : super(key: key);
 
   @override
   State<SelectionPage> createState() => _SelectionPageState();
 }
 
 class _SelectionPageState extends State<SelectionPage> {
+  static final TextStyle font =
+      TextStyle(fontFamily: 'ErasBod', fontSize: 20, color: Colors.white);
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: AppColor.backroundColor,
       appBar: AppBar(
         title: Text(
           'militTransfer',
@@ -31,57 +30,57 @@ class _SelectionPageState extends State<SelectionPage> {
           ),
         ),
         centerTitle: true,
-        backgroundColor: Colors.black54, //should work with primary color
+        backgroundColor: Colors.black, //should work with primary color
       ),
-      backgroundColor: Color(0xFF0A0E21),
       body: SafeArea(
         child: SingleChildScrollView(
           child: Center(
             child: Padding(
-              padding:
-                  const EdgeInsets.symmetric(vertical: 200, horizontal: 100),
+              padding: const EdgeInsets.only(top: 150),
               child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  ElevatedButton(
-                    onPressed: () {
-                      // Navigator.push(
-                      //   context,
-                      //   MaterialPageRoute(
-                      //       builder: (context) => const encodePage()),
-                      // );
-                    },
-                    child: Text(
-                      'Encode Image',
-                    ),
-                    style: ElevatedButton.styleFrom(
-                        backgroundColor: Color(0xff008631),
-                        foregroundColor: Colors.white,
-                        textStyle: TextStyle(
-                            fontFamily: 'fira code',
-                            fontWeight: FontWeight.w700,
-                            fontSize: 20)),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.symmetric(
-                        vertical: 100, horizontal: 10),
-                    child: ElevatedButton(
-                      onPressed: () {
-                        // Navigator.push(
-                        //   context,
-                        //   MaterialPageRoute(
-                        //       builder: (context) => const decodePage()),
-                        // );
-                      },
-                      child: Text(
-                        'Decode Image',
+                  GestureDetector(
+                    child: Reusable1(
+                      text: Text(
+                        'Encode',
+                        style: font,
                       ),
-                      style: ElevatedButton.styleFrom(
-                          backgroundColor: Color(0xff008631),
-                          foregroundColor: Colors.white,
-                          textStyle: TextStyle(
-                              fontFamily: 'fira code',
-                              fontWeight: FontWeight.w700,
-                              fontSize: 20)),
+                    ),
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => encodePage()),
+                      );
+                    },
+                  ),
+                  //SizedBox(width: 70, height: 40),
+                  GestureDetector(
+                    child: Reusable1(
+                      text: Text(
+                        'Decode',
+                        style: font,
+                      ),
+                    ),
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => encodePage()),
+                      );
+                    },
+                  ),
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => AboutPage()),
+                      );
+                    },
+                    child: Reusable1(
+                      text: Text(
+                        'About',
+                        style: font,
+                      ),
                     ),
                   ),
                 ],
@@ -89,6 +88,27 @@ class _SelectionPageState extends State<SelectionPage> {
             ),
           ),
         ),
+      ),
+    );
+  }
+}
+
+class Reusable1 extends StatelessWidget {
+  Reusable1({required this.text});
+  final Text text;
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      width: 120,
+      height: 120,
+      child: Center(
+        child: text,
+      ),
+      margin: EdgeInsets.all(15.0),
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(10),
+        color: Color(0xFF49724A),
       ),
     );
   }

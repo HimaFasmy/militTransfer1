@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:image_picker/image_picker.dart';
 import 'dart:io';
+import 'package:milit_transfer/colors/colors.dart';
+import 'package:milit_transfer/font/font.dart';
 
 class encodePage extends StatefulWidget {
   const encodePage({Key? key}) : super(key: key);
@@ -11,6 +13,8 @@ class encodePage extends StatefulWidget {
 }
 
 class _encodePageState extends State<encodePage> {
+  static final TextStyle buttonFont1 = TextStyle(
+      fontFamily: 'fira code', fontWeight: FontWeight.w700, fontSize: 16);
   //static const platform = MethodChannel('samples.flutter.dev/militTransfer');
 
   ImagePicker picker = ImagePicker();
@@ -31,7 +35,7 @@ class _encodePageState extends State<encodePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.black,
+      backgroundColor: AppColor.backroundColor,
       appBar: AppBar(
         title: Text(
           'militTransfer',
@@ -90,12 +94,9 @@ class _encodePageState extends State<encodePage> {
                 padding: EdgeInsets.symmetric(vertical: 8, horizontal: 140.0),
                 child: ElevatedButton(
                   style: ElevatedButton.styleFrom(
-                    backgroundColor: Color(0xff008631),
+                    backgroundColor: AppColor.buttonColor,
                     foregroundColor: Colors.white,
-                    textStyle: TextStyle(
-                        fontFamily: 'fira code',
-                        fontWeight: FontWeight.w700,
-                        fontSize: 16),
+                    textStyle: buttonFont1,
                   ),
                   onPressed: () async {
                     image = await picker.pickImage(source: ImageSource.gallery);
@@ -198,12 +199,9 @@ class _encodePageState extends State<encodePage> {
                     const EdgeInsets.symmetric(vertical: 30, horizontal: 140.0),
                 child: ElevatedButton(
                   style: ElevatedButton.styleFrom(
-                    backgroundColor: Color(0xff008631),
+                    backgroundColor: AppColor.buttonColor,
                     foregroundColor: Colors.white,
-                    textStyle: TextStyle(
-                        fontFamily: 'fira code',
-                        fontWeight: FontWeight.w700,
-                        fontSize: 16),
+                    textStyle: buttonFont1,
                   ),
                   onPressed: () {
                     // _image != null
