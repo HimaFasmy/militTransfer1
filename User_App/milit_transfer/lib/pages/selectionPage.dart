@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:milit_transfer/pages/encode.dart';
 import 'package:milit_transfer/pages/aboutPage.dart';
+import 'package:milit_transfer/pages/decodePage.dart';
 import 'package:milit_transfer/colors/colors.dart';
 import 'package:milit_transfer/font/font.dart';
+import 'package:milit_transfer/pages/aboutPage1.dart';
 
 class SelectionPage extends StatefulWidget {
   const SelectionPage({Key? key}) : super(key: key);
@@ -65,7 +67,7 @@ class _SelectionPageState extends State<SelectionPage> {
                     onTap: () {
                       Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => encodePage()),
+                        MaterialPageRoute(builder: (context) => decodePage()),
                       );
                     },
                   ),
@@ -73,7 +75,8 @@ class _SelectionPageState extends State<SelectionPage> {
                     onTap: () {
                       Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => AboutPage()),
+                        MaterialPageRoute(
+                            builder: (context) => Authentification()),
                       );
                     },
                     child: Reusable1(
