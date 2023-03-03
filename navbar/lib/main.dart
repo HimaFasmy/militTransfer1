@@ -1,7 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
-import 'package:line_icons/line_icon.dart';
-import 'package:line_icons/line_icons.dart';
 import 'package:pol/Encrypt.dart';
 import 'lolz.dart';
 import 'decrypt.dart';
@@ -14,7 +11,6 @@ class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     // SystemChrome.setEnabledSystemUIMode(SystemUiMode.manual, overlays: []);
@@ -62,7 +58,7 @@ class _HomepageState extends State<Homepage>with TickerProviderStateMixin {
       backgroundColor: Colors.white,
       body: SafeArea(
           child: TabBarView(
-            physics: NeverScrollableScrollPhysics(),
+            physics: BouncingScrollPhysics(),
             controller: _controller,
 
             children: [
