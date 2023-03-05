@@ -4,23 +4,12 @@ import 'package:milit_transfer/pages/selectionPage.dart';
 import 'package:milit_transfer/colors/colors.dart';
 import 'package:milit_transfer/font/font.dart';
 
-// void main() {
-//   runApp(const MaterialApp(
-//     title: 'navigation',
-//   ));
-// }
-
-class LoginPage extends StatefulWidget {
-  //const LoginPage({Key? key}) : super(key: key);
-
+class SignUpPage extends StatefulWidget {
   @override
-  State<LoginPage> createState() => _LoginPageState();
+  State<SignUpPage> createState() => _SignUpPageState();
 }
 
-class _LoginPageState extends State<LoginPage> {
-  final formKey = GlobalKey<FormState>();
-  String? _email, _password;
-
+class _SignUpPageState extends State<SignUpPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -42,23 +31,10 @@ class _LoginPageState extends State<LoginPage> {
         child: SingleChildScrollView(
           child: Column(
             children: [
-              Row(
-                children: [
-                  Padding(
-                    padding: const EdgeInsets.symmetric(
-                        vertical: 80.0, horizontal: 120.0),
-                    child: Image(
-                      image: AssetImage('images/logo.png'),
-                      width: 150,
-                      height: 80,
-                    ),
-                  ),
-                ],
-              ),
               Padding(
-                padding: const EdgeInsets.all(10.0),
+                padding: const EdgeInsets.only(top: 70.0),
                 child: Text(
-                  'Login to manage your account',
+                  'Sign Up to manage your account',
                   style: TextStyle(
                     fontFamily: 'fira code',
                     fontSize: 16,
@@ -71,7 +47,7 @@ class _LoginPageState extends State<LoginPage> {
                 child: Column(
                   children: [
                     Container(
-                      height: 100,
+                      height: 90,
                       //padding: EdgeInsets.fromLTRB(10, 10, 10, 0),
                       //color: Colors.white,
                       child: Padding(
@@ -80,15 +56,6 @@ class _LoginPageState extends State<LoginPage> {
                         child: TextFormField(
                           style: TextStyle(color: Colors.white),
                           cursorColor: AppColor.cursorColor,
-                          validator: (value) {
-                            if (value!.isEmpty) {
-                              return "Please enter Username";
-                            }
-                            return null;
-                          },
-                          onChanged: (value) {
-                            _email = value;
-                          },
                           decoration: const InputDecoration(
                             enabledBorder: OutlineInputBorder(
                               borderSide: BorderSide(
@@ -103,7 +70,7 @@ class _LoginPageState extends State<LoginPage> {
                             ),
                             filled: true,
                             fillColor: Color(0xff3a4c40), //grey
-                            labelText: 'Username',
+                            labelText: 'First Name',
                             labelStyle: TextStyle(
                               fontWeight: FontWeight.w700,
                               fontSize: 15,
@@ -115,7 +82,7 @@ class _LoginPageState extends State<LoginPage> {
                       ),
                     ),
                     Container(
-                      height: 100,
+                      height: 90,
                       //padding: EdgeInsets.fromLTRB(10, 10, 10, 0),
                       //color: Colors.white,
                       child: Padding(
@@ -123,21 +90,83 @@ class _LoginPageState extends State<LoginPage> {
                             EdgeInsets.symmetric(horizontal: 40, vertical: 20),
                         child: TextFormField(
                           style: TextStyle(color: Colors.white),
-                          cursorColor: Colors.blue,
-                          validator: (value) {
-                            if (value!.isEmpty) {
-                              return "Please enter Password";
-                            }
-                            return null;
-                          },
-                          onChanged: (value) {
-                            _password = value;
-                          },
-                          obscureText: true,
+                          cursorColor: AppColor.cursorColor,
                           decoration: const InputDecoration(
                             enabledBorder: OutlineInputBorder(
                               borderSide: BorderSide(
-                                  width: 1, color: Colors.greenAccent),
+                                width: 1,
+                                color: Color(0xFF5FE6A3),
+                              ),
+                              //borderRadius: BorderRadius.circular(50.0),
+                            ),
+                            focusedBorder: OutlineInputBorder(
+                              borderSide: BorderSide(
+                                  width: 1, color: Colors.amberAccent),
+                            ),
+                            filled: true,
+                            fillColor: Color(0xff3a4c40), //grey
+                            labelText: 'Last Name',
+                            labelStyle: TextStyle(
+                              fontWeight: FontWeight.w700,
+                              fontSize: 15,
+                              color: Color(0xff2bc20e),
+                              fontFamily: 'fira code',
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
+                    //Padding(padding: const EdgeInsets.all(10.0), child: loginBtn),
+                    Container(
+                      height: 90,
+                      //padding: EdgeInsets.fromLTRB(10, 10, 10, 0),
+                      //color: Colors.white,
+                      child: Padding(
+                        padding:
+                            EdgeInsets.symmetric(horizontal: 40, vertical: 20),
+                        child: TextFormField(
+                          style: TextStyle(color: Colors.white),
+                          cursorColor: AppColor.cursorColor,
+                          decoration: const InputDecoration(
+                            enabledBorder: OutlineInputBorder(
+                              borderSide: BorderSide(
+                                width: 1,
+                                color: Color(0xFF5FE6A3),
+                              ),
+                              //borderRadius: BorderRadius.circular(50.0),
+                            ),
+                            focusedBorder: OutlineInputBorder(
+                              borderSide: BorderSide(
+                                  width: 1, color: Colors.amberAccent),
+                            ),
+                            filled: true,
+                            fillColor: Color(0xff3a4c40), //grey
+                            labelText: 'Email',
+                            labelStyle: TextStyle(
+                              fontWeight: FontWeight.w700,
+                              fontSize: 15,
+                              color: Color(0xff2bc20e),
+                              fontFamily: 'fira code',
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
+                    Container(
+                      height: 90,
+                      //padding: EdgeInsets.fromLTRB(10, 10, 10, 0),
+                      //color: Colors.white,
+                      child: Padding(
+                        padding:
+                            EdgeInsets.symmetric(horizontal: 40, vertical: 20),
+                        child: TextFormField(
+                          cursorColor: AppColor.cursorColor,
+                          decoration: const InputDecoration(
+                            enabledBorder: OutlineInputBorder(
+                              borderSide: BorderSide(
+                                width: 1,
+                                color: Color(0xFF5FE6A3),
+                              ),
                               //borderRadius: BorderRadius.circular(50.0),
                             ),
                             focusedBorder: OutlineInputBorder(
@@ -157,7 +186,41 @@ class _LoginPageState extends State<LoginPage> {
                         ),
                       ),
                     ),
-                    //Padding(padding: const EdgeInsets.all(10.0), child: loginBtn),
+                    Container(
+                      height: 90,
+                      //padding: EdgeInsets.fromLTRB(10, 10, 10, 0),
+                      //color: Colors.white,
+                      child: Padding(
+                        padding:
+                            EdgeInsets.symmetric(horizontal: 40, vertical: 20),
+                        child: TextFormField(
+                          style: TextStyle(color: Colors.white),
+                          cursorColor: AppColor.cursorColor,
+                          decoration: const InputDecoration(
+                            enabledBorder: OutlineInputBorder(
+                              borderSide: BorderSide(
+                                width: 1,
+                                color: Color(0xFF5FE6A3),
+                              ),
+                              //borderRadius: BorderRadius.circular(50.0),
+                            ),
+                            focusedBorder: OutlineInputBorder(
+                              borderSide: BorderSide(
+                                  width: 1, color: Colors.amberAccent),
+                            ),
+                            filled: true,
+                            fillColor: Color(0xff3a4c40), //grey
+                            labelText: 'Confirm Password',
+                            labelStyle: TextStyle(
+                              fontWeight: FontWeight.w700,
+                              fontSize: 15,
+                              color: Color(0xff2bc20e),
+                              fontFamily: 'fira code',
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
                     Container(
                       child: Padding(
                         padding: const EdgeInsets.symmetric(
@@ -180,7 +243,7 @@ class _LoginPageState extends State<LoginPage> {
                             );
                           },
                           child: Text(
-                            'Login',
+                            'Sign Up',
                           ),
                         ),
                       ),
