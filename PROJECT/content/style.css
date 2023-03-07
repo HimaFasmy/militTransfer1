@@ -1,0 +1,281 @@
+@font-face{
+    src: url(./CONSOLAB.TTF);
+    font-family: console_font;
+}
+
+*{
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	user-select: none;
+}
+
+body{
+	/* background-color: rgb(0, 0, 0); */
+	font-family: console_font;
+}
+
+.spin-image2 {
+	opacity: 0.4;
+	animation: spinn 15s linear infinite;
+	transform-style: preserve-3d;
+	scale: 0.45;
+	z-index: 1;
+	filter: drop-shadow(0px 0px 20px rgb(255, 255, 255));
+}
+
+@keyframes spinn {
+	from { transform: rotateY(0deg); }
+	to { transform: rotateY(360deg); }
+}
+
+.mytabs{
+	position: absolute;
+	top: 0;
+	display: flex;
+	flex-wrap: wrap;
+	width: 100%;
+	height: 93vh;
+	/* font-family: sans-serif; */
+	padding: auto;
+	z-index: 2;
+	scale: 0.95;
+}
+
+.mytabs input[type="radio"]{
+	display: none;
+}
+
+.mytabs .tab_label{
+	width: 50%;
+	height: 7vh;
+	font-weight: bold;
+	text-align: center;
+	font-size: 30px;
+	cursor: pointer;
+	border: 2px solid rgb(0, 117, 8);
+}
+
+.mytabs .tab{
+	width: 100%;
+	height: 100%;
+	padding: 20px;
+	color: white;
+	order: 1;
+	display: none;
+	border: 2px solid rgb(0, 117, 8);
+	border-top: none;
+}
+
+.mytabs .tab h2{
+	font-size: 3rem;
+}
+
+.mytabs input[type="radio"]:checked + .tab_label + .tab{
+	display: block;
+}
+
+.mytabs input[type="radio"]:checked + .tab_label{
+	border-bottom: none;
+}
+
+
+/* ----------------------------USER REGISTRATION----------------------------- */
+.register_container{
+    /* font-family: sans-serif; */
+    /* background: #000000; */
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+	overflow: hidden;
+}
+
+.register_form{
+    width: 600px;
+	border: 1px solid #229206;
+	padding: 10px;
+	background: rgba(0, 0, 0, 0.6);
+	z-index: 1;
+}
+
+.register_form h2 {
+	letter-spacing: 3px;
+	text-align: left;
+	font-size: 35px;
+	margin-bottom: 30px;
+	color: #229206;
+	border-bottom: 2px solid rgba(255, 255, 255, 0.292);
+	padding: 13px 0;
+}
+
+label {
+	color: #229206;
+	font-size: 18px;
+	padding: 10px;
+}
+
+.register_input {
+    font-size: 18px;
+	display: block;
+    background: none;
+    color: white;
+    border: none;
+    outline: none;
+	width: 95%;
+	padding: 10px;
+	margin: 10px auto;
+    border-bottom: 2px solid #229206;
+}
+
+.register_input_password, .register_input_password_confirm{
+    font-size: 18px;
+	display: block;
+    background: none;
+    color: white;
+    border: none;
+    outline: none;
+	width: 70%;
+	padding: 10px;
+	margin: 10px auto;
+    border-bottom: 2px solid #229206;
+}
+
+.submit_btn{
+    width: 100%;
+    background: none;
+    border: 2px solid rgb(0, 117, 8);
+	/* font-family: sans-serif; */
+    color: white;
+    padding: 5px;
+    cursor: pointer;
+    font-size: 17px;
+    margin: 12px 0;
+    transition: 0.3s;
+}
+
+.submit_btn:hover{
+    border: 2px solid rgb(47, 255, 61);
+}
+
+#form-error,
+#password-error {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+}
+
+
+
+/* ----------------------------USER TABLE----------------------------- */
+::-webkit-scrollbar {
+	width: 10px;
+	height: 10px;
+	left: 100px;
+}
+
+::-webkit-scrollbar-track {
+	background-color: rgba(0, 117, 8, 0.459);
+}
+
+::-webkit-scrollbar-thumb {
+	background-color: rgba(0, 117, 8, 0.767);
+}
+
+
+
+.user_container{
+	position: absolute;
+	color: rgb(0, 117, 8);
+	left: 50%;
+	transform: translate(-50%);
+	width: 80%;
+	background-color: rgba(0, 0, 0, 0.6);
+	/* margin-top: 100px; */
+}
+
+.user_table{
+	border-collapse: collapse;
+	width: 100%;
+	border: 2px solid rgb(0, 117, 8);
+	overflow: scroll;
+	margin-bottom: 20px;
+}
+
+.user_table tr{
+	transition: all 0.2s ease-in;
+	font-size: 18px;
+}
+
+.user_rows:hover{
+	color: rgb(0, 198, 0);
+	scale: 1.01;
+}
+
+.user_table th, td{
+	padding: 20px;
+	text-align: left;
+	border-bottom: 1px solid #ddd;
+	text-align: center;
+}
+
+.user_table th{
+	position: sticky;
+	top: 0%;
+	background-color: black;
+	margin: 20px;
+	border-bottom: 2px solid rgb(0, 117, 8);
+}
+
+.btn-user_edit, .btn-user_delete{
+	text-decoration: none;
+	color: rgb(0, 117, 8);
+	padding: 10px 20px 10px 20px;
+	transition: 0.3s;
+}
+
+.btn-user_edit{
+	border: 2px solid rgb(0, 88, 136);
+}
+
+.btn-user_edit:hover{
+	border: 2px solid rgb(0, 134, 206);
+	background-color: rgba(0, 134, 206, 0.08);
+}
+
+.btn-user_delete{
+	border: 2px solid rgb(136, 0, 0);
+}
+
+.btn-user_delete:hover{
+	border: 2px solid rgb(195, 3, 3);
+	background-color: rgba(195, 3, 3, 0.08);
+}
+
+
+.logout_btn{
+	position: absolute;
+	text-decoration: none;
+	right: 3%;
+	bottom: 4%;
+    background: none;
+    border: 2px solid rgb(0, 117, 8);
+	/* font-family: sans-serif; */
+    color: white;
+	background-color: black;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 17px;
+    transition: 0.3s;
+	z-index: 2;
+}
+
+.logout_btn:hover{
+    border: 2px solid rgb(47, 255, 61);
+}
