@@ -1,8 +1,8 @@
 <?php
 
-$sname= "localhost";
-$unmae= "root";
-$password = "";
+$sname= "192.168.34.21";
+$unmae= "megha";
+$password = "000000";
 
 $db_name = "admin_db";
 
