@@ -6,6 +6,12 @@
       <excludeFolder url="file://$MODULE_DIR$/User_App/milit_transfer/.pub" />
       <excludeFolder url="file://$MODULE_DIR$/User_App/milit_transfer/build" />
       <excludeFolder url="file://$MODULE_DIR$/User_App/milit_transfer/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/navbar/build" />
+      <excludeFolder url="file://$MODULE_DIR$/navbar/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/navbar/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/location/build" />
+      <excludeFolder url="file://$MODULE_DIR$/location/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/location/.dart_tool" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
