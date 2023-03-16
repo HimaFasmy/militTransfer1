@@ -1,7 +1,7 @@
 <?php
-$servername = "localhost";
-$username = "root";
-$password = "";
+$servername = "192.168.34.21";
+$username = "megha";
+$password = "000000";
 $dbName = "steganographyappserver";
 
 // Create connection
