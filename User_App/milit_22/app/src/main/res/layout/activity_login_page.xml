@@ -12,7 +12,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Welcome"
+        android:textAllCaps="true"
+        android:textColor="@color/white"
         android:textSize="28sp"
+        android:textStyle="bold|italic"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -30,31 +33,35 @@
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.74" />
+        app:layout_constraintVertical_bias="0.74"
+        android:textColor="@color/white"/>
 
     <EditText
         android:id="@+id/editTextTextPersonName"
-        android:layout_width="255dp"
-        android:layout_height="46dp"
+        android:layout_width="295dp"
+        android:layout_height="59dp"
         android:ems="10"
-        android:hint="Username"
-
-        android:padding="10dp"
+        android:hint="@string/username"
+        android:textColorHint="@color/white"
         android:inputType="textPersonName"
+        android:padding="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.557"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.427" />
+        app:layout_constraintVertical_bias="0.427"
+        android:textColor="@color/white"
+        android:backgroundTint="@color/white"/>
 
     <EditText
         android:id="@+id/editTextTextPassword"
-        android:layout_width="255dp"
-        android:layout_height="46dp"
-
+        android:layout_width="294dp"
+        android:layout_height="53dp"
+        android:textColor="@color/white"
         android:ems="10"
-        android:hint="Enter password"
+        android:hint="@string/enter_password"
+        android:textColorHint="@color/white"
         android:inputType="textPassword"
         android:padding="10dp"
         app:endIconMode="password_toggle"
@@ -63,6 +70,7 @@
         app:layout_constraintHorizontal_bias="0.557"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.519" />
+        app:layout_constraintVertical_bias="0.541"
+        android:backgroundTint="@color/white"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

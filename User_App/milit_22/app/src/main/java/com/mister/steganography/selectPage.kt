@@ -5,14 +5,24 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 
+
 class selectPage : AppCompatActivity() {
+    private lateinit var decode:Button
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_select_page)
 
+
+
         var sel = findViewById<Button>(R.id.enDe)
         sel.setOnClickListener{
             val intent = Intent(this, fingerPage::class.java)
+            startActivity(intent)
+        }
+        decode=findViewById(R.id.encode);
+        decode.setOnClickListener{
+            val intent = Intent(this, Decodee::class.java)
             startActivity(intent)
         }
 
