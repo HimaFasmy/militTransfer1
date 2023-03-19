@@ -77,15 +77,15 @@ class EncodeFragment : Fragment(), TextEncodingCallback, View.OnClickListener {
                             textEncoding.execute(imageSteganography)
                         }
                         else{
-                            Toast.makeText(activity,"Masukan Message", Toast.LENGTH_SHORT).show()
+                            Toast.makeText(activity,"Enter Message", Toast.LENGTH_SHORT).show()
                         }
                     }
                     else{
-                        Toast.makeText(activity,"Masukan Key", Toast.LENGTH_SHORT).show()
+                        Toast.makeText(activity,"Enter Key", Toast.LENGTH_SHORT).show()
                     }
                 }
                 else{
-                    Toast.makeText(activity,"Masukan Gambar", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(activity,"Select Image", Toast.LENGTH_SHORT).show()
                 }
             }
             R.id.btn_save->{

@@ -11,6 +11,7 @@
         militTransfer is an Image Steganographic software, which allows users to conceal secret messages within images. This powerful tool can be used for a variety of purposes,
         including secure communication, data protection and so on.\n\n
         Thank you for choosing us, and we look forward to serving you!"</string>
-    <string name="aboutus">AboutUs</string>
+    <string name="aboutus">About Us</string>
     <string name="decode">DeCode</string>
+    <string name="encode">Encode</string>
 </resources>

@@ -19,11 +19,21 @@ import java.util.concurrent.Executor;
 
 public class fingerPage extends AppCompatActivity {
 
+    private boolean encode;
+    private boolean decode;
+    private boolean about;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_finger_page);
 
+        boolean getEncode = getIntent().getBooleanExtra("encode", false);
+        encode = getEncode;
+        boolean getDecode = getIntent().getBooleanExtra("decode", false);
+        decode = getDecode;
+        boolean getAbout = getIntent().getBooleanExtra("about", false);
+        about = getAbout;
         Button btn = findViewById(R.id.verify);
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -51,8 +61,14 @@ public class fingerPage extends AppCompatActivity {
             public void onAuthenticationSucceeded(@NonNull BiometricPrompt.AuthenticationResult result) {
                 super.onAuthenticationSucceeded(result);
                 notifyUser("Authentication Succeeded!");
-                Intent intent = new Intent(fingerPage.this,MainActivity.class);
-                startActivity(intent);
+                if (decode) {
+                    Intent intent = new Intent(fingerPage.this,Decodee.class);
+                    startActivity(intent);
+                }
+                else {
+                    Intent intent = new Intent(fingerPage.this,MainActivity.class);
+                    startActivity(intent);
+                }
             }
 
             @Override

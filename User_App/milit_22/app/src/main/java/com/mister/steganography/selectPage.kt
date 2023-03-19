@@ -8,6 +8,10 @@ import android.widget.Button
 
 class selectPage : AppCompatActivity() {
     private lateinit var decode:Button
+    private var encode:Boolean = false
+    private var decodee:Boolean = false
+    private var aboutt:Boolean = false
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -22,7 +26,9 @@ class selectPage : AppCompatActivity() {
         }
         decode=findViewById(R.id.encode);
         decode.setOnClickListener{
-            val intent = Intent(this, Decodee::class.java)
+            val intent = Intent(this, fingerPage::class.java)
+            decodee = true;
+            intent.putExtra("decode",decodee)
             startActivity(intent)
         }
 
@@ -30,6 +36,8 @@ class selectPage : AppCompatActivity() {
         var about = findViewById<Button>(R.id.Abt)
         about.setOnClickListener{
             val intent = Intent(this, aboutPage::class.java)
+            aboutt = true;
+            intent.putExtra("About", aboutt)
             startActivity(intent)
         }
     }

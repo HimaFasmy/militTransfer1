@@ -20,7 +20,7 @@ class MainActivity : AppCompatActivity(){
         val adapter =  ViewPagerAdapter(supportFragmentManager)
 //        adapter.addFragment(HomeFragment(),"About")
         adapter.addFragment(EncodeFragment(),"Encode")
-        adapter.addFragment(DecodeFragment(),"Decode")
+        //adapter.addFragment(DecodeFragment(),"Decode")
 
 
         viewpager.adapter=adapter

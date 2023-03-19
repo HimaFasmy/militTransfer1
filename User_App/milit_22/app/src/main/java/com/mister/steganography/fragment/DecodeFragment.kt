@@ -56,11 +56,11 @@ class DecodeFragment : Fragment(), TextDecodingCallback, View.OnClickListener {
                         textDecoding.execute(imagesteganographydecode)
                     }
                     else{
-                        Toast.makeText(activity,"Masukan Secret Key", Toast.LENGTH_SHORT).show()
+                        Toast.makeText(activity,"Enter Secret Key", Toast.LENGTH_SHORT).show()
                     }
                 }
                 else{
-                    Toast.makeText(activity,"Masukan Gambar", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(activity,"Select Image", Toast.LENGTH_SHORT).show()
                 }
             }
         }
@@ -82,7 +82,7 @@ class DecodeFragment : Fragment(), TextDecodingCallback, View.OnClickListener {
     private fun image_chooser() {
         val intent = Intent(Intent.ACTION_PICK)
         intent.type = "image/*"
-        startActivityForResult(Intent.createChooser(intent, "Select Picture"), SELECT_PICTURE)
+        startActivityForResult(Intent.createChooser(intent, "Select Image"), SELECT_PICTURE)
     }
 
     override fun onStartTextEncoding() {

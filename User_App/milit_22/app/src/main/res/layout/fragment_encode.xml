@@ -36,7 +36,9 @@
                 android:layout_marginHorizontal="40dp"
                 android:layout_marginTop="10dp"
                 android:hint="Input Secret Key"
-                android:text=""/>
+                android:text=""
+                android:textColor="@color/textcolor"
+                android:textColorHint="@color/hintTrextColor"/>
 
             <EditText
                 android:inputType="text"
@@ -47,7 +49,9 @@
                 android:layout_marginHorizontal="40dp"
                 android:layout_marginTop="10dp"
                 android:hint="Input Message"
-                android:text=""/>
+                android:text=""
+                android:textColor="@color/textcolor"
+                android:textColorHint="@color/hintTrextColor"/>
             <Button
                 android:id="@+id/btn_encode"
                 android:layout_width="match_parent"
