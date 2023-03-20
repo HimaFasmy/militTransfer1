@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="NONE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="7af66c66-f5a7-4fd7-956c-d4e86dc03101" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../militTransfer_new/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../militTransfer_new/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../militTransfer_new/.idea/.name" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../militTransfer_new/.idea/codeStyles/Project.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../militTransfer_new/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../militTransfer_new/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../militTransfer_new/.idea/gradle.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../militTransfer_new/.idea/jarRepositories.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../militTransfer_new/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../militTransfer_new/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../militTransfer_new/Image/.gitkeep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../militTransfer_new/Image/Hnet-image.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../militTransfer_new/Image/Hnet-image1.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../militTransfer_new/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../militTransfer_new/app/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../militTransfer_new/app/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../militTransfer_new/app/proguard-rules.pro" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../militTransfer_new/app/src/androidTest/java/com/mister/steganography/ExampleInstrumentedTest.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../militTransfer_new/app/src/main/AndroidManifest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../militTransfer_new/app/src/main/java/com/mister/steganography/MainActivity.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../militTransfer_new/app/src/main/java/com/mister/steganography/ViewPagerAdapter.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../militTransfer_new/app/src/main/java/com/mister/steganography/fragment/DecodeFragment.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../militTransfer_new/app/src/main/java/com/mister/steganography/fragment/EncodeFragment.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../militTransfer_new/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../militTransfer_new/app/src/main/res/drawable/ic_launcher_background.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../militTransfer_new/app/src/main/res/layout/activity_main.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../militTransfer_new/app/src/main/res/layout/fragment_decode.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../militTransfer_new/app/src/main/res/layout/fragment_encode.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../militTransfer_new/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../militTransfer_new/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../militTransfer_new/app/src/main/res/mipmap-hdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../militTransfer_new/app/src/main/res/mipmap-hdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../militTransfer_new/app/src/main/res/mipmap-mdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../militTransfer_new/app/src/main/res/mipmap-mdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../militTransfer_new/app/src/main/res/mipmap-xhdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../militTransfer_new/app/src/main/res/mipmap-xhdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../militTransfer_new/app/src/main/res/mipmap-xxhdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../militTransfer_new/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../militTransfer_new/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../militTransfer_new/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../militTransfer_new/app/src/main/res/values/colors.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../militTransfer_new/app/src/main/res/values/strings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../militTransfer_new/app/src/main/res/values/styles.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../militTransfer_new/app/src/test/java/com/mister/steganography/ExampleUnitTest.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../militTransfer_new/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../militTransfer_new/gradle.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../militTransfer_new/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../militTransfer_new/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../militTransfer_new/gradlew" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../militTransfer_new/gradlew.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../militTransfer_new/settings.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Image/.gitkeep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Image/Hnet-image.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Image/Hnet-image1.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/mister/steganography/Decodee.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/mister/steganography/ViewPagerAdapter.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/mister/steganography/aboutPage.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/mister/steganography/coverPage.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/mister/steganography/loginPage.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/getstarted.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/gradient.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/ic_launcher_background.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/mili.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_about_page.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_cover_page.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-hdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-hdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-mdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-mdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xhdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xhdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xxhdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/test/java/com/mister/steganography/ExampleUnitTest.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradlew" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradlew.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../milit_transfer/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../milit_transfer/.metadata" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../milit_transfer/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../milit_transfer/analysis_options.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../milit_transfer/android/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../milit_transfer/android/app/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../milit_transfer/android/app/src/debug/AndroidManifest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../milit_transfer/android/app/src/main/AndroidManifest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../milit_transfer/android/app/src/main/java/com/example/milit_transfer/MainActivity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../milit_transfer/android/app/src/main/res/drawable-v21/launch_background.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../milit_transfer/android/app/src/main/res/drawable/launch_background.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../milit_transfer/android/app/src/main/res/mipmap-hdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../milit_transfer/android/app/src/main/res/mipmap-mdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../milit_transfer/android/app/src/main/res/mipmap-xhdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../milit_transfer/android/app/src/main/res/mipmap-xxhdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../milit_transfer/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../milit_transfer/android/app/src/main/res/values-night/styles.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../milit_transfer/android/app/src/main/res/values/styles.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../milit_transfer/android/app/src/profile/AndroidManifest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../milit_transfer/android/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../milit_transfer/android/gradle.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../milit_transfer/android/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../milit_transfer/android/settings.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../milit_transfer/fonts/ERASBD.TTF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../milit_transfer/fonts/ErasBoldITC.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../milit_transfer/fonts/FiraCode-VariableFont_wght.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../milit_transfer/fonts/freefontsdownload.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../milit_transfer/images/logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../milit_transfer/lib/colors/colors.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../milit_transfer/lib/font/font.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../milit_transfer/lib/main.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../milit_transfer/lib/pages/aboutPage.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../milit_transfer/lib/pages/aboutPage1.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../milit_transfer/lib/pages/coverPage.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../milit_transfer/lib/pages/decodePage.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../milit_transfer/lib/pages/encode.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../milit_transfer/lib/pages/loginPage.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../milit_transfer/lib/pages/logoutPage.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../milit_transfer/lib/pages/navBar.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../milit_transfer/lib/pages/profilePage.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../milit_transfer/lib/pages/selectionPage.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../milit_transfer/lib/pages/signupPage.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../milit_transfer/pubspec.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../milit_transfer/pubspec.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../milit_transfer/test/widget_test.dart" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectId" id="2NGVeE1Fqp6owBNzWxIohy8RRUg" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "cidr.known.project.marker": "true",
+    "dart.analysis.tool.window.visible": "false",
+    "last_opened_file_path": "C:/Users/Acer/Documents/GitHub/militTransfer/User_App/milit_22",
+    "show.migrate.to.gradle.popup": "false"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="7af66c66-f5a7-4fd7-956c-d4e86dc03101" name="Changes" comment="" />
+      <created>1679290498979</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1679290498979</updated>
+    </task>
+    <servers />
+  </component>
+</project>
