@@ -7,21 +7,6 @@
     android:layout_height="match_parent"
     tools:context=".coverPage">
 
-    <Button
-        android:id="@+id/cov"
-        android:layout_width="150dp"
-        android:layout_height="50dp"
-        android:background="@drawable/getstarted"
-        android:textColor="#63a675"
-        android:text="Get Started"
-        android:textAllCaps="false"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.767" />
-
 
     <ImageView
         android:id="@+id/imageView2"
