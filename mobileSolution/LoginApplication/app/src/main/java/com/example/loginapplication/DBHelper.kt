@@ -26,7 +26,7 @@ class DBHelper(context: Context) :SQLiteOpenHelper(context, "Userdata", null, 1)
         }
         return true
     }
-    
+
     fun chackuserpass(username: String, password: String): Boolean {
         val p0 = this.writableDatabase
         val query = "select * from Userdata where username= '$username' and password='$password'"
