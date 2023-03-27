@@ -41,7 +41,13 @@
             android:name=".fingerPage"
             android:exported="false" />
         <activity
-            android:name=".loginPage"
+            android:name=".authPage"
+            android:exported="false" />
+        <activity
+            android:name=".login"
+            android:exported="false" />
+        <activity
+            android:name=".signup"
             android:exported="false" />
         <activity
             android:name=".coverPage"
