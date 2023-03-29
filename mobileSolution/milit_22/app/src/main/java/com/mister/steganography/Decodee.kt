@@ -21,7 +21,7 @@ class Decodee : AppCompatActivity() {
     private fun setuptab() {
         val adapter =  ViewPagerAdapter(supportFragmentManager)
         // adapter.addFragment(HomeFragment(),"About")
-//        adapter.addFragment(EncodeFragment(),"Encode")
+        adapter.addFragment(EncodeFragment(),"Encode")
         adapter.addFragment(DecodeFragment(),"Decode")
 
 

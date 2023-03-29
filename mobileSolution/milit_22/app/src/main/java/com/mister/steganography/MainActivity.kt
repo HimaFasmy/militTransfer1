@@ -16,8 +16,8 @@ class MainActivity : AppCompatActivity(){
 
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        setSupportActionBar(toolbar)
-        supportActionBar!!.title= "Steganography"
+        //setSupportActionBar(toolbar)
+        //supportActionBar!!.title= "militTransfer"
         setuptab()
     }
 
