@@ -1,5 +1,6 @@
 package com.example.loginapplication
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.TextUtils
@@ -7,7 +8,7 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
 
-class sigup : AppCompatActivity() {
+class signup : AppCompatActivity() {
 
     private lateinit var uname: EditText
     private lateinit var pword: EditText
@@ -36,17 +37,23 @@ class sigup : AppCompatActivity() {
             }
             else{
                 if (pwordtext.equals(cpwordtext)){
-                    if (savedata==true){
+                    if (savedata == true){
                         Toast.makeText(this, "Signup Successful.", Toast.LENGTH_SHORT).show()
+                        val intent = Intent(applicationContext, MainActivity::class.java)
+                        startActivity(intent)
                     }
                     else{
                         Toast.makeText(this, "User Exists", Toast.LENGTH_SHORT).show()
                     }
                 }
-                else{                       
+                else{
                     Toast.makeText(this, "Password Not Match", Toast.LENGTH_SHORT).show()
                 }
             }
         }
+    }
+    override fun onDestroy() {
+        super.onDestroy()
+        db.close()
     }
 }

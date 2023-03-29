@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:background="@drawable/wp2888505"
+    android:background="#000000"
     android:layout_height="match_parent"
     tools:context=".signup">
 
@@ -12,8 +12,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="100dp"
-        android:text="User Signup"
-        android:textColor="@color/white"
+        android:text="SIGNUP"
+        android:textColor="#ffffff"
         android:textSize="50sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -24,15 +24,17 @@
         android:id="@+id/editTextTextPersonName"
         android:layout_width="300dp"
         android:layout_height="60dp"
-        android:layout_marginTop="88dp"
+        android:layout_marginTop="75dp"
+        android:textAllCaps="false"
         android:ems="10"
         android:hint="Username"
         android:inputType="textPersonName"
         android:paddingLeft="20dp"
-        android:textColor="@color/white"
+        android:textColor="#ffffff"
         android:textColorHint="#5A5858"
-        android:textSize="20sp"
-        android:textStyle="bold"
+        android:textSize="15sp"
+        android:background="@drawable/text_underline"
+        android:textCursorDrawable="@drawable/cursor_color"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
@@ -43,13 +45,15 @@
         android:layout_width="300dp"
         android:layout_height="60dp"
         android:layout_marginTop="30dp"
+        android:textAllCaps="false"
         android:ems="10"
         android:inputType="textPassword"
         android:hint="Password"
         android:textColorHint="#5A5858"
-        android:textColor="@color/white"
-        android:textSize="20sp"
-        android:textStyle="bold"
+        android:textColor="#ffffff"
+        android:textSize="15sp"
+        android:background="@drawable/text_underline"
+        android:textCursorDrawable="@drawable/cursor_color"
         android:paddingLeft="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
@@ -61,27 +65,54 @@
         android:layout_width="300dp"
         android:layout_height="60dp"
         android:layout_marginTop="30dp"
+        android:textAllCaps="false"
         android:ems="10"
         android:inputType="textPassword"
         android:hint="Conform Password"
         android:textColorHint="#5A5858"
-        android:textColor="@color/white"
-        android:textSize="20sp"
-        android:textStyle="bold"
+        android:textColor="#ffffff"
+        android:textSize="15sp"
+        android:background="@drawable/text_underline"
+        android:textCursorDrawable="@drawable/cursor_color"
         android:paddingLeft="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword" />
 
+<!--    <LinearLayout-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:orientation="vertical"-->
+<!--        app:layout_constraintBottom_toTopOf="@+id/button4"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword2">-->
+
+<!--                <com.google.android.material.textfield.TextInputLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_margin="16dp">-->
+
+<!--                    <AutoCompleteTextView-->
+<!--                        android:id="@+id/auto_complete"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:hint="@string/item_label"-->
+<!--                        android:textColor="#ffffff"-->
+<!--                        android:inputType="none"/>-->
+
+<!--                </com.google.android.material.textfield.TextInputLayout>-->
+<!--    </LinearLayout>-->
+
     <Button
         android:id="@+id/button4"
-        android:layout_width="250dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="60dp"
-        android:textStyle="bold"
-        android:textSize="30sp"
-        android:textColor="@color/black"
+        android:layout_width="140dp"
+        android:layout_height="50dp"
+        android:background="@drawable/getstarted"
+        android:layout_marginTop="150dp"
+        android:textSize="15dp"
+        android:textColor="#ffffff"
         android:text="SIGNUP"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"

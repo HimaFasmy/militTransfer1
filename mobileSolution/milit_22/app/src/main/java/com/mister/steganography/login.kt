@@ -1,4 +1,4 @@
-package com.example.loginapplication
+package com.mister.steganography
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -35,7 +35,7 @@ class login : AppCompatActivity() {
                 val checkuser = dbh.chackuserpass(useredtx, passedtx)
                 if (checkuser==true){
                     Toast.makeText(this, "Login Successful", Toast.LENGTH_SHORT).show()
-                    val intent = Intent(applicationContext, complete::class.java)
+                    val intent = Intent(applicationContext, selectPage::class.java)
                     startActivity(intent)
                 }
                 else{
