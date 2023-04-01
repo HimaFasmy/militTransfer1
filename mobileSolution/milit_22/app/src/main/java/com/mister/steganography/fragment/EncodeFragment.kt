@@ -103,16 +103,16 @@ class EncodeFragment : Fragment(), TextEncodingCallback, View.OnClickListener {
                             save!!.setCancelable(false)
                             save!!.show()
                             PerformEncoding.start()
-                            Toast.makeText(activity,"Selesai di save", Toast.LENGTH_SHORT).show()
+                            Toast.makeText(activity,"Saved", Toast.LENGTH_SHORT).show()
                             edittext_message.text=null
                             edittext_key.text=null
                         }
                         else{
-                            Toast.makeText(activity,"Isi key dan message", Toast.LENGTH_SHORT).show()
+                            Toast.makeText(activity,"Enter key and message", Toast.LENGTH_SHORT).show()
                         }
                     }
                     else{
-                        Toast.makeText(activity,"Pilih dan Encode gambar", Toast.LENGTH_SHORT).show()
+                        Toast.makeText(activity,"Select and encode image", Toast.LENGTH_SHORT).show()
                     }
                 }
             }
@@ -164,7 +164,7 @@ class EncodeFragment : Fragment(), TextEncodingCallback, View.OnClickListener {
     }
 
     override fun onStartTextEncoding() {
-        Toast.makeText(activity,"Lagi Encoded", Toast.LENGTH_SHORT).show()
+        Toast.makeText(activity,"Encoded", Toast.LENGTH_SHORT).show()
     }
 
     override fun onCompleteTextEncoding(p0: ImageSteganography?) {

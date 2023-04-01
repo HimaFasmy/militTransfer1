@@ -97,7 +97,7 @@ class DecodeFragment : Fragment(), TextDecodingCallback, View.OnClickListener {
             }
             else{
                 edittext_message_decode.setText("")
-                Toast.makeText(activity,"Secret Key Wrong",Toast.LENGTH_SHORT).show()
+                Toast.makeText(activity,"Wrong secret key",Toast.LENGTH_SHORT).show()
             }
         }
         else{
