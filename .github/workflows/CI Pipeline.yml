@@ -1,0 +1,38 @@
+name: CI Pipeline
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Set up PHP
+      uses: shivammathur/setup-php@v2
+      with:
+        php-version: '8.0'
+        extensions: mbstring, zip, pdo_mysql
+
+    - name: Install dependencies
+      run: composer install
+
+    - name: Run tests
+      run: vendor/bin/phpunit
+
+    - name: Deploy to staging
+      uses: easingthemes/ssh-deploy@v2.2.13
+      with:
+        ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+        ssh-public-key: ${{ secrets.SSH_PUBLIC_KEY }}
+        server-ip: ${{ secrets.SERVER_IP }}
+        server-username: ${{ secrets.SERVER_USERNAME }}
+        remote-dir: /var/www/html/staging
