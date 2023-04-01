@@ -93,16 +93,16 @@ class DecodeFragment : Fragment(), TextDecodingCallback, View.OnClickListener {
         if(p0!=null && p0.isDecoded) {
             if (!p0.isSecretKeyWrong){
                 edittext_message_decode.setText(p0.message)
-                Toast.makeText(activity,"Decoded", Toast.LENGTH_SHORT).show()
+                Toast.makeText(activity,"Decode Successful", Toast.LENGTH_SHORT).show()
             }
             else{
                 edittext_message_decode.setText("")
-                Toast.makeText(activity,"Wrong secret key",Toast.LENGTH_SHORT).show()
+                Toast.makeText(activity,"Incorrect secret key",Toast.LENGTH_SHORT).show()
             }
         }
         else{
             edittext_message_decode.setText("")
-            Toast.makeText(activity,"Not Decode",Toast.LENGTH_SHORT).show()
+            Toast.makeText(activity,"Decode Unsuccessful",Toast.LENGTH_SHORT).show()
         }
     }
 }

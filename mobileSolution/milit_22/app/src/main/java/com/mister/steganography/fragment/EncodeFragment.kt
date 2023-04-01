@@ -171,10 +171,10 @@ class EncodeFragment : Fragment(), TextEncodingCallback, View.OnClickListener {
         if (p0 != null && p0.isEncoded()) {
             encoded_image = p0.getEncoded_image()
             img_encript.setImageBitmap(encoded_image)
-            Toast.makeText(activity,"Encoded", Toast.LENGTH_SHORT).show()
+            Toast.makeText(activity,"Encode Successful", Toast.LENGTH_SHORT).show()
         }
         else{
-            Toast.makeText(activity,"Not Encoded", Toast.LENGTH_SHORT).show()
+            Toast.makeText(activity,"Encode Unsuccessful", Toast.LENGTH_SHORT).show()
         }
     }
     private fun checkAndRequestPermissions() {
