@@ -1,0 +1,110 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.example.fingerr"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="24"
+8-->C:\Users\Acer\AndroidStudioProjects\fingerr\app\src\main\AndroidManifest.xml
+9        android:targetSdkVersion="33" />
+9-->C:\Users\Acer\AndroidStudioProjects\fingerr\app\src\main\AndroidManifest.xml
+10
+11    <uses-permission android:name="android.permission.USE_BIOMETRIC" /> <!-- suppress DeprecatedClassUsageInspection -->
+11-->[androidx.biometric:biometric:1.1.0] C:\Users\Acer\.gradle\caches\transforms-3\af94b1693669c39d9c6bf0488375cc03\transformed\biometric-1.1.0\AndroidManifest.xml:24:5-72
+11-->[androidx.biometric:biometric:1.1.0] C:\Users\Acer\.gradle\caches\transforms-3\af94b1693669c39d9c6bf0488375cc03\transformed\biometric-1.1.0\AndroidManifest.xml:24:22-69
+12    <uses-permission android:name="android.permission.USE_FINGERPRINT" />
+12-->[androidx.biometric:biometric:1.1.0] C:\Users\Acer\.gradle\caches\transforms-3\af94b1693669c39d9c6bf0488375cc03\transformed\biometric-1.1.0\AndroidManifest.xml:27:5-74
+12-->[androidx.biometric:biometric:1.1.0] C:\Users\Acer\.gradle\caches\transforms-3\af94b1693669c39d9c6bf0488375cc03\transformed\biometric-1.1.0\AndroidManifest.xml:27:22-71
+13
+14    <permission
+14-->[androidx.core:core:1.9.0] C:\Users\Acer\.gradle\caches\transforms-3\a4522fe6b275a4534bfc0eadc1a8e0f8\transformed\core-1.9.0\AndroidManifest.xml:22:5-24:47
+15        android:name="com.example.fingerr.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+15-->[androidx.core:core:1.9.0] C:\Users\Acer\.gradle\caches\transforms-3\a4522fe6b275a4534bfc0eadc1a8e0f8\transformed\core-1.9.0\AndroidManifest.xml:23:9-81
+16        android:protectionLevel="signature" />
+16-->[androidx.core:core:1.9.0] C:\Users\Acer\.gradle\caches\transforms-3\a4522fe6b275a4534bfc0eadc1a8e0f8\transformed\core-1.9.0\AndroidManifest.xml:24:9-44
+17
+18    <uses-permission android:name="com.example.fingerr.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+18-->[androidx.core:core:1.9.0] C:\Users\Acer\.gradle\caches\transforms-3\a4522fe6b275a4534bfc0eadc1a8e0f8\transformed\core-1.9.0\AndroidManifest.xml:26:5-97
+18-->[androidx.core:core:1.9.0] C:\Users\Acer\.gradle\caches\transforms-3\a4522fe6b275a4534bfc0eadc1a8e0f8\transformed\core-1.9.0\AndroidManifest.xml:26:22-94
+19
+20    <application
+20-->C:\Users\Acer\AndroidStudioProjects\fingerr\app\src\main\AndroidManifest.xml:5:5-32:19
+21        android:allowBackup="true"
+21-->C:\Users\Acer\AndroidStudioProjects\fingerr\app\src\main\AndroidManifest.xml:6:9-35
+22        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+22-->[androidx.core:core:1.9.0] C:\Users\Acer\.gradle\caches\transforms-3\a4522fe6b275a4534bfc0eadc1a8e0f8\transformed\core-1.9.0\AndroidManifest.xml:28:18-86
+23        android:dataExtractionRules="@xml/data_extraction_rules"
+23-->C:\Users\Acer\AndroidStudioProjects\fingerr\app\src\main\AndroidManifest.xml:7:9-65
+24        android:debuggable="true"
+25        android:extractNativeLibs="false"
+26        android:fullBackupContent="@xml/backup_rules"
+26-->C:\Users\Acer\AndroidStudioProjects\fingerr\app\src\main\AndroidManifest.xml:8:9-54
+27        android:icon="@mipmap/ic_launcher"
+27-->C:\Users\Acer\AndroidStudioProjects\fingerr\app\src\main\AndroidManifest.xml:9:9-43
+28        android:label="@string/app_name"
+28-->C:\Users\Acer\AndroidStudioProjects\fingerr\app\src\main\AndroidManifest.xml:10:9-41
+29        android:supportsRtl="true"
+29-->C:\Users\Acer\AndroidStudioProjects\fingerr\app\src\main\AndroidManifest.xml:11:9-35
+30        android:testOnly="true"
+31        android:theme="@style/Theme.Fingerr" >
+31-->C:\Users\Acer\AndroidStudioProjects\fingerr\app\src\main\AndroidManifest.xml:12:9-45
+32        <activity
+32-->C:\Users\Acer\AndroidStudioProjects\fingerr\app\src\main\AndroidManifest.xml:14:9-22:20
+33            android:name="com.example.fingerr.SecretActivity1"
+33-->C:\Users\Acer\AndroidStudioProjects\fingerr\app\src\main\AndroidManifest.xml:15:13-44
+34            android:exported="true" >
+34-->C:\Users\Acer\AndroidStudioProjects\fingerr\app\src\main\AndroidManifest.xml:16:13-36
+35            <intent-filter>
+35-->C:\Users\Acer\AndroidStudioProjects\fingerr\app\src\main\AndroidManifest.xml:17:13-21:29
+36                <action android:name="android.intent.action.MAIN" />
+36-->C:\Users\Acer\AndroidStudioProjects\fingerr\app\src\main\AndroidManifest.xml:18:17-69
+36-->C:\Users\Acer\AndroidStudioProjects\fingerr\app\src\main\AndroidManifest.xml:18:25-66
+37
+38                <category android:name="android.intent.category.LAUNCHER" />
+38-->C:\Users\Acer\AndroidStudioProjects\fingerr\app\src\main\AndroidManifest.xml:20:17-77
+38-->C:\Users\Acer\AndroidStudioProjects\fingerr\app\src\main\AndroidManifest.xml:20:27-74
+39            </intent-filter>
+40        </activity>
+41        <activity
+41-->C:\Users\Acer\AndroidStudioProjects\fingerr\app\src\main\AndroidManifest.xml:23:9-31:20
+42            android:name="com.example.fingerr.MainActivity"
+42-->C:\Users\Acer\AndroidStudioProjects\fingerr\app\src\main\AndroidManifest.xml:24:13-41
+43            android:exported="true" >
+43-->C:\Users\Acer\AndroidStudioProjects\fingerr\app\src\main\AndroidManifest.xml:25:13-36
+44            <intent-filter>
+44-->C:\Users\Acer\AndroidStudioProjects\fingerr\app\src\main\AndroidManifest.xml:17:13-21:29
+45                <action android:name="android.intent.action.MAIN" />
+45-->C:\Users\Acer\AndroidStudioProjects\fingerr\app\src\main\AndroidManifest.xml:18:17-69
+45-->C:\Users\Acer\AndroidStudioProjects\fingerr\app\src\main\AndroidManifest.xml:18:25-66
+46
+47                <category android:name="android.intent.category.LAUNCHER" />
+47-->C:\Users\Acer\AndroidStudioProjects\fingerr\app\src\main\AndroidManifest.xml:20:17-77
+47-->C:\Users\Acer\AndroidStudioProjects\fingerr\app\src\main\AndroidManifest.xml:20:27-74
+48            </intent-filter>
+49        </activity>
+50
+51        <provider
+51-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Acer\.gradle\caches\transforms-3\c41b4469453a8a9f9613e5cbc1cd1923\transformed\emoji2-1.2.0\AndroidManifest.xml:24:9-32:20
+52            android:name="androidx.startup.InitializationProvider"
+52-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Acer\.gradle\caches\transforms-3\c41b4469453a8a9f9613e5cbc1cd1923\transformed\emoji2-1.2.0\AndroidManifest.xml:25:13-67
+53            android:authorities="com.example.fingerr.androidx-startup"
+53-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Acer\.gradle\caches\transforms-3\c41b4469453a8a9f9613e5cbc1cd1923\transformed\emoji2-1.2.0\AndroidManifest.xml:26:13-68
+54            android:exported="false" >
+54-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Acer\.gradle\caches\transforms-3\c41b4469453a8a9f9613e5cbc1cd1923\transformed\emoji2-1.2.0\AndroidManifest.xml:27:13-37
+55            <meta-data
+55-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Acer\.gradle\caches\transforms-3\c41b4469453a8a9f9613e5cbc1cd1923\transformed\emoji2-1.2.0\AndroidManifest.xml:29:13-31:52
+56                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+56-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Acer\.gradle\caches\transforms-3\c41b4469453a8a9f9613e5cbc1cd1923\transformed\emoji2-1.2.0\AndroidManifest.xml:30:17-75
+57                android:value="androidx.startup" />
+57-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Acer\.gradle\caches\transforms-3\c41b4469453a8a9f9613e5cbc1cd1923\transformed\emoji2-1.2.0\AndroidManifest.xml:31:17-49
+58            <meta-data
+58-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\Acer\.gradle\caches\transforms-3\528f10946969151ddeecc9c08cbfcbae\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:31:13-33:52
+59                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+59-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\Acer\.gradle\caches\transforms-3\528f10946969151ddeecc9c08cbfcbae\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:32:17-78
+60                android:value="androidx.startup" />
+60-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\Acer\.gradle\caches\transforms-3\528f10946969151ddeecc9c08cbfcbae\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:33:17-49
+61        </provider>
+62    </application>
+63
+64</manifest>
