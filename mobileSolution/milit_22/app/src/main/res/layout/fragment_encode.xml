@@ -2,7 +2,7 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:background="#263238"
+    android:background="#000000"
     android:layout_height="match_parent"
     tools:context=".fragment.EncodeFragment">
     <ScrollView
@@ -22,8 +22,9 @@
                 android:id="@+id/btn_openimage"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:textColor="#ffffff"
                 android:layout_below="@+id/img_encript"
-                android:background="#cfd8dc"
+                android:background="@drawable/getstarted"
                 android:layout_marginHorizontal="40dp"
                 android:layout_marginTop="10dp"
                 android:text="Choose Image" />
@@ -57,8 +58,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/edittext_message"
-                android:background="#cfd8dc"
+                android:background="@drawable/getstarted"
                 android:layout_marginHorizontal="40dp"
+                android:textColor="#ffffff"
                 android:layout_marginTop="10dp"
                 android:text="Encode" />
             <Button
@@ -66,7 +68,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/btn_encode"
-                android:background="#cfd8dc"
+                android:background="@drawable/getstarted"
+                android:textColor="#ffffff"
                 android:layout_marginHorizontal="40dp"
                 android:layout_marginTop="10dp"
                 android:text="Save" />

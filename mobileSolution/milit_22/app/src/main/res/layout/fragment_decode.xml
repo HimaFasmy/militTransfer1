@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#263238"
+    android:background="#000000"
     tools:context=".fragment.EncodeFragment">
     <ScrollView
         android:layout_width="match_parent"
@@ -20,7 +20,8 @@
                 android:id="@+id/button_openimage_decode"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="#cfd8dc"
+                android:background="@drawable/getstarted"
+                android:textColor="#ffffff"
                 android:layout_below="@+id/image_decode"
                 android:layout_marginHorizontal="40dp"
                 android:layout_marginTop="10dp"
@@ -53,7 +54,8 @@
             <Button
                 android:id="@+id/btn_decode"
                 android:layout_width="match_parent"
-                android:background="#cfd8dc"
+                android:background="@drawable/getstarted"
+                android:textColor="#ffffff"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/edittext_message_decode"
                 android:layout_marginHorizontal="40dp"
