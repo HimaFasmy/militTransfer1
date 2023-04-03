@@ -68,7 +68,7 @@
         android:textAllCaps="false"
         android:ems="10"
         android:inputType="textPassword"
-        android:hint="Conform Password"
+        android:hint="Confirm Password"
         android:textColorHint="#5A5858"
         android:textColor="#ffffff"
         android:textSize="15sp"

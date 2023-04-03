@@ -33,7 +33,7 @@ class signup : AppCompatActivity() {
             val savedata = db.insertdata(unametext, pwordtext)
 
             if (TextUtils.isEmpty(unametext) || TextUtils.isEmpty(pwordtext) || TextUtils.isEmpty(cpwordtext)){
-                Toast.makeText(this, "Enter the Username, Password & Conform Password", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "Enter the Username, Password & Confirm Password", Toast.LENGTH_SHORT).show()
             }
             else{
                 if (pwordtext.equals(cpwordtext)){
