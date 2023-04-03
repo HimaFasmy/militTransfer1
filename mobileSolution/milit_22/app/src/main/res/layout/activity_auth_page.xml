@@ -36,6 +36,7 @@
                 android:layout_height="50dp"
                 android:layout_marginRight="20dp"
                 android:background="@drawable/getstarted"
+                android:fontFamily="@font/fira_code_bold"
                 android:text="SIGNUP"
                 android:textColor="#fff"
                 android:textSize="15sp"
@@ -47,6 +48,7 @@
                 android:layout_height="50dp"
                 android:background="#006600"
                 android:text="LOGIN"
+                android:fontFamily="@font/fira_code_bold"
                 android:textColor="#ffffff"
                 android:textSize="15sp"
                 app:backgroundTint="@null" />

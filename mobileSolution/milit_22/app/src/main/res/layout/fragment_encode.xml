@@ -18,61 +18,70 @@
                 android:layout_width="match_parent"
                 android:layout_height="270dp"
                 android:background="@android:color/black"/>
+
             <Button
                 android:id="@+id/btn_openimage"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textColor="#ffffff"
                 android:layout_below="@+id/img_encript"
-                android:background="@drawable/getstarted"
                 android:layout_marginHorizontal="40dp"
                 android:layout_marginTop="10dp"
-                android:text="Choose Image" />
+                android:background="@drawable/getstarted"
+                android:fontFamily="@font/fira_code_bold"
+                android:text="Choose Image"
+                android:textColor="#ffffff" />
+
             <EditText
-                android:inputType="numberPassword"
                 android:id="@+id/edittext_key"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/btn_openimage"
                 android:layout_marginHorizontal="40dp"
                 android:layout_marginTop="10dp"
+                android:fontFamily="@font/fira_code_light"
                 android:hint="Input Secret Key"
+                android:inputType="numberPassword"
                 android:text=""
                 android:textColor="@color/textcolor"
-                android:textColorHint="@color/hintTrextColor"/>
+                android:textColorHint="@color/hintTrextColor" />
 
             <EditText
-                android:inputType="text"
                 android:id="@+id/edittext_message"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/edittext_key"
                 android:layout_marginHorizontal="40dp"
                 android:layout_marginTop="10dp"
+                android:fontFamily="@font/fira_code_light"
                 android:hint="Input Message"
+                android:inputType="text"
                 android:text=""
                 android:textColor="@color/textcolor"
-                android:textColorHint="@color/hintTrextColor"/>
+                android:textColorHint="@color/hintTrextColor" />
+
             <Button
                 android:id="@+id/btn_encode"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/edittext_message"
-                android:background="@drawable/getstarted"
                 android:layout_marginHorizontal="40dp"
-                android:textColor="#ffffff"
                 android:layout_marginTop="10dp"
-                android:text="Encode" />
+                android:background="@drawable/getstarted"
+                android:fontFamily="@font/fira_code_bold"
+                android:text="Encode"
+                android:textColor="#ffffff" />
+
             <Button
                 android:id="@+id/btn_save"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/btn_encode"
-                android:background="@drawable/getstarted"
-                android:textColor="#ffffff"
                 android:layout_marginHorizontal="40dp"
                 android:layout_marginTop="10dp"
-                android:text="Save" />
+                android:background="@drawable/getstarted"
+                android:fontFamily="@font/fira_code_bold"
+                android:text="Save"
+                android:textColor="#ffffff" />
         </RelativeLayout>
     </ScrollView>
 </FrameLayout>

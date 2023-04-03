@@ -11,6 +11,7 @@
         android:id="@+id/textView2"
         android:layout_width="322dp"
         android:layout_height="379dp"
+        android:fontFamily="@font/fira_code_light"
         android:text="@string/aboutUs"
         android:textAlignment="center"
         android:textAllCaps="true"
@@ -20,4 +21,16 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="329dp"
+        android:layout_height="132dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.548"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.926"
+        app:srcCompat="@drawable/mili" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -4,12 +4,7 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2e25bf33-0b33-4085-9495-576d1a38c173" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../milit_22/.idea/deploymentTargetDropDown.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../milit_22/app/src/main/res/values/colors.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../milit_22/app/src/main/res/values/colors.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../milit_22/app/src/main/res/values/styles.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../milit_22/app/src/main/res/values/styles.xml" afterDir="false" />
-    </list>
+    <list default="true" id="2e25bf33-0b33-4085-9495-576d1a38c173" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -31,7 +26,7 @@
     "RunOnceActivity.cidr.known.project.marker": "true",
     "cidr.known.project.marker": "true",
     "dart.analysis.tool.window.visible": "false",
-    "last_opened_file_path": "C:/Users/Acer/Documents/GitHub/militTransfer/mobileSolution/location",
+    "last_opened_file_path": "C:/Users/Acer/Documents/GitHub/militTransfer/mobileSolution/milit_22",
     "show.migrate.to.gradle.popup": "false"
   }
 }]]></component>
@@ -45,5 +40,16 @@
       <updated>1680503318447</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>
