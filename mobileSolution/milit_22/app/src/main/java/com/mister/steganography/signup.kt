@@ -4,56 +4,66 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.TextUtils
+import android.view.WindowManager
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
+import com.google.firebase.auth.FirebaseAuth
+import com.mister.steganography.databinding.ActivitySignupBinding
 
 class signup : AppCompatActivity() {
 
-    private lateinit var uname: EditText
-    private lateinit var pword: EditText
-    private lateinit var cpword: EditText
-    private lateinit var signupbtn: Button
-    private lateinit var db: DBHelper
+    private lateinit var binding: ActivitySignupBinding
+    private lateinit var firebaseAuth: FirebaseAuth
 
     override fun onCreate(savedInstanceState: Bundle?) {
+
+        //hide status bar
+        window.setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN)
+
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_signup)
 
-        uname = findViewById(R.id.editTextTextPersonName)
-        pword = findViewById(R.id.editTextTextPassword)
-        cpword = findViewById(R.id.editTextTextPassword2)
-        signupbtn = findViewById(R.id.button4)
-        db = DBHelper(this)
+        binding = ActivitySignupBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
-        signupbtn.setOnClickListener{
-            val unametext = uname.text.toString()
-            val pwordtext = pword.text.toString()
-            val cpwordtext = cpword.text.toString()
-            val savedata = db.insertdata(unametext, pwordtext)
+        firebaseAuth = FirebaseAuth.getInstance()
 
-            if (TextUtils.isEmpty(unametext) || TextUtils.isEmpty(pwordtext) || TextUtils.isEmpty(cpwordtext)){
-                Toast.makeText(this, "Enter the Username, Password & Conform Password", Toast.LENGTH_SHORT).show()
-            }
-            else{
-                if (pwordtext.equals(cpwordtext)){
-                    if (savedata == true){
-                        Toast.makeText(this, "Signup Successful.", Toast.LENGTH_SHORT).show()
-                        val intent = Intent(applicationContext, authPage::class.java)
-                        startActivity(intent)
+        binding.textView.setOnClickListener {
+            val intent = Intent(this, login::class.java)
+            startActivity(intent)
+        }
+        binding.button.setOnClickListener {
+            val email = binding.emailEt.text.toString()
+            val pass = binding.passET.text.toString()
+            val confirmPass = binding.confirmPassEt.text.toString()
+
+            if (email.isNotEmpty() && pass.isNotEmpty() && confirmPass.isNotEmpty()) {
+                if (pass == confirmPass) {
+
+                    firebaseAuth.createUserWithEmailAndPassword(email, pass).addOnCompleteListener {
+                        if (it.isSuccessful) {
+
+                            // Clear text areas
+                            binding.emailEt.text?.clear()
+                            binding.passET.text?.clear()
+                            binding.confirmPassEt.text?.clear()
+
+                            Toast.makeText(this, "User Registration Successful", Toast.LENGTH_SHORT).show()
+
+                            val intent = Intent(this, login::class.java)
+                            startActivity(intent)
+                        } else {
+                            Toast.makeText(this, it.exception.toString(), Toast.LENGTH_SHORT).show()
+
+                        }
                     }
-                    else{
-                        Toast.makeText(this, "User Exists", Toast.LENGTH_SHORT).show()
-                    }
+                } else {
+                    Toast.makeText(this, "Password is not matching", Toast.LENGTH_SHORT).show()
                 }
-                else{
-                    Toast.makeText(this, "Password Not Match", Toast.LENGTH_SHORT).show()
-                }
+            } else {
+                Toast.makeText(this, "Empty Fields Are Not Allowed", Toast.LENGTH_SHORT).show()
             }
         }
     }
-    override fun onDestroy() {
-        super.onDestroy()
-        db.close()
-    }
+
 }

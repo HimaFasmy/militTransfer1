@@ -1,9 +1,9 @@
 package com.mister.steganography;
 
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.Toast;
 
@@ -27,6 +27,10 @@ public class fingerPage extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_finger_page);
+
+        //hide status bar
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
+                WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
         boolean getEncode = getIntent().getBooleanExtra("encode", false);
         encode = getEncode;
@@ -76,14 +80,10 @@ public class fingerPage extends AppCompatActivity {
                 super.onAuthenticationFailed();
                 notifyUser("Authentication Failed!");
             }
-
-
         };
 
         BiometricPrompt biometricPrompt = new BiometricPrompt(this,executor,callback);
         return biometricPrompt;
-
-
     }
 
     private void notifyUser(String message){

@@ -20,10 +20,10 @@ import android.widget.Button
             supportActionBar?.hide()
 
             Handler().postDelayed({
-                val intent = Intent(this@coverPage, authPage::class.java)
+                val intent = Intent(this@coverPage, login::class.java)
                 startActivity(intent)
                 finish()
-            }, 1000)
+            }, 1500)
         }
     }
 

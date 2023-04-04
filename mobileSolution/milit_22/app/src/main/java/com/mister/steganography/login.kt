@@ -1,48 +1,59 @@
 package com.mister.steganography
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.text.TextUtils
-import android.widget.Button
-import android.widget.EditText
+import android.renderscript.Script.FieldBase
+import android.view.WindowManager
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
+import com.google.firebase.auth.FirebaseAuth
+import com.mister.steganography.databinding.ActivityLoginBinding
 
 class login : AppCompatActivity() {
 
-    private lateinit var loginbtn: Button
-    private lateinit var edituser: EditText
-    private lateinit var editpword: EditText
-    private lateinit var dbh: DBHelper
+    private lateinit var binding: ActivityLoginBinding
+    private lateinit var firebaseAuth: FirebaseAuth
 
     override fun onCreate(savedInstanceState: Bundle?) {
+
+        //hide status bar
+        window.setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN)
+
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_login)
+        binding = ActivityLoginBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
-        loginbtn = findViewById(R.id.button)
-        edituser = findViewById(R.id.editTextTextPersonName2)
-        editpword = findViewById(R.id.editTextTextPassword3)
-        dbh = DBHelper(this)
+        firebaseAuth = FirebaseAuth.getInstance()
+        binding.textView.setOnClickListener{
+            val intent = Intent(this, signup::class.java)
+            startActivity(intent)
+        }
 
-        loginbtn.setOnClickListener{
-            val useredtx = edituser.text.toString()
-            val passedtx = editpword.text.toString()
+        binding.button.setOnClickListener{
+            val email = binding.emailEt.text.toString()
+            val pass = binding.passET.text.toString()
 
-            if (TextUtils.isEmpty(useredtx) || TextUtils.isEmpty(passedtx)){
-                Toast.makeText(this, "Enter the Username & Password", Toast.LENGTH_SHORT).show()
-            }
-            else{
-                val checkuser = dbh.chackuserpass(useredtx, passedtx)
-                if (checkuser==true){
-                    Toast.makeText(this, "Login Successful", Toast.LENGTH_SHORT).show()
-                    val intent = Intent(applicationContext, selectPage::class.java)
-                    startActivity(intent)
-                }
-                else{
-                    Toast.makeText(this, "Wrong User name & Password", Toast.LENGTH_SHORT).show()
+            if (email.isEmpty()) {
+                Toast.makeText(this, "Please enter your email", Toast.LENGTH_SHORT).show()
+            } else if (pass.isEmpty()) {
+                Toast.makeText(this, "Please enter your password", Toast.LENGTH_SHORT).show()
+            } else {
+
+                firebaseAuth.signInWithEmailAndPassword(email, pass).addOnCompleteListener {
+                    if (it.isSuccessful) {
+
+                        // Clear text areas
+                        binding.emailEt.text?.clear()
+                        binding.passET.text?.clear()
+
+                        val intent = Intent(this, selectPage::class.java)
+                        startActivity(intent)
+                    } else {
+                        Toast.makeText(this, "Incorrect email or password", Toast.LENGTH_SHORT).show()
+
+                    }
                 }
             }
         }
-
     }
 }
