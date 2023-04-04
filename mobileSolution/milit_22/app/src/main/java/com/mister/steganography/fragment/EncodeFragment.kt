@@ -1,11 +1,16 @@
 package com.mister.steganography.fragment
 
 import android.Manifest
+import android.annotation.SuppressLint
 import android.app.Activity
 import android.app.ProgressDialog
+import android.content.Context
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.graphics.Bitmap
+import android.location.Location
+import android.location.LocationListener
+import android.location.LocationManager
 import android.net.Uri
 import android.os.Bundle
 import android.os.Environment
@@ -17,6 +22,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import com.ayush.imagesteganographylibrary.Text.AsyncTaskCallback.TextEncodingCallback
@@ -24,12 +30,14 @@ import com.ayush.imagesteganographylibrary.Text.ImageSteganography
 import com.ayush.imagesteganographylibrary.Text.TextEncoding
 
 import com.mister.steganography.R
+import com.mister.steganography.login
 import kotlinx.android.synthetic.main.fragment_encode.*
 import java.io.File
 import java.io.FileOutputStream
 import java.io.IOException
 import java.io.OutputStream
 import kotlin.random.Random
+import kotlin.system.exitProcess
 
 class EncodeFragment : Fragment(), TextEncodingCallback, View.OnClickListener {
     private val SELECT_PICTURE = 100
@@ -37,10 +45,13 @@ class EncodeFragment : Fragment(), TextEncodingCallback, View.OnClickListener {
     private var original_image: Bitmap? = null
     private var encoded_image: Bitmap? = null
     private var save: ProgressDialog? = null
+    private lateinit var setLocation: Location
+    private lateinit var locationManager: LocationManager
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         checkAndRequestPermissions()
+        checkandrequestlocation()
     }
 
     override fun onCreateView(
@@ -201,6 +212,74 @@ class EncodeFragment : Fragment(), TextEncodingCallback, View.OnClickListener {
                     1
                 )
             }
+        }
+    }
+    @SuppressLint("MissingPermission")
+    private fun checkandrequestlocation(){
+        locationManager = requireContext().getSystemService(Context.LOCATION_SERVICE) as LocationManager
+        setLocation = Location("")
+        setLocation.latitude = 6.89546171227332
+        setLocation.longitude = 79.85557835033019
+
+        checkLocationEnabled()
+        locationManager.requestLocationUpdates(
+            LocationManager.GPS_PROVIDER, 10000, 0f, locationListener
+        )
+    }
+    private fun checkLocationEnabled() {
+        val gpsEnabled = locationManager.isProviderEnabled(LocationManager.GPS_PROVIDER)
+        if (!gpsEnabled) {
+            // Location is not enabled, show an alert dialog to the user
+            val builder = AlertDialog.Builder(requireContext())
+            builder.setMessage("Your location seems to be disabled, do you want to enable it?")
+                .setCancelable(false)
+                .setPositiveButton("Turn on Location") { _, _ ->
+                    // Open location settings screen
+                    startActivity(Intent(android.provider.Settings.ACTION_LOCATION_SOURCE_SETTINGS))
+                }
+                .setNegativeButton("Exit App") { _, _ ->
+                    // Cancel the dialog
+                    exitProcess(0)
+                }
+            val alert = builder.create()
+            alert.show()
+        }
+    }
+    override fun onResume() {
+        super.onResume()
+        checkLocationEnabled()
+    }
+    private val locationListener: LocationListener = object : LocationListener {
+        override fun onLocationChanged(location: Location) {
+            val distance = location.distanceTo(setLocation)
+            if (distance <= 500) {
+                //do nothing
+            } else if (distance > 500) {
+                // The current location is outside the 500 meters range of the set location
+                //log out current session
+                Toast.makeText(requireContext(),
+                    "Logging out due to exceeding location zone area...",
+                    Toast.LENGTH_SHORT
+                ).show()
+                Thread.sleep(3500)
+                locationManager.removeUpdates(this)
+                val intent = Intent(requireContext(), login::class.java)
+                startActivity(intent);
+                activity?.finish()
+            }
+        }
+
+        override fun onProviderEnabled(provider: String) {
+            checkLocationEnabled()
+        }
+
+        override fun onProviderDisabled(provider: String) {
+            checkLocationEnabled()
+        }
+
+        @Deprecated("Deprecated in Java")
+        override fun onStatusChanged(provider: String?, status: Int, extras: Bundle?) {
+            // Do nothing
         }
     }
 }
