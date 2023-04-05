@@ -13,6 +13,8 @@ import android.widget.Button
 import android.widget.TimePicker
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
+import java.util.*
+import kotlin.concurrent.schedule
 import kotlin.system.exitProcess
 
 
@@ -87,11 +89,12 @@ class selectPage : AppCompatActivity() {
                     "Logging out due to exceeding location zone area...",
                     Toast.LENGTH_LONG
                 ).show()
-                Thread.sleep(3500)
                 locationManager.removeUpdates(this)
-                intent = Intent(applicationContext, login::class.java)
-                startActivity(intent);
-                finish()
+                Timer().schedule(3000) {
+                    intent = Intent(applicationContext, login::class.java)
+                    startActivity(intent);
+                    finish()
+                }
             }
         }
 
@@ -134,4 +137,8 @@ class selectPage : AppCompatActivity() {
         checkLocationEnabled()
     }
 
+    override fun onDestroy() {
+        super.onDestroy()
+        locationManager.removeUpdates(locationListener)
+    }
 }

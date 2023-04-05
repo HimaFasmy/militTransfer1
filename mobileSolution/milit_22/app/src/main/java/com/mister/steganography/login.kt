@@ -138,4 +138,9 @@ class login : AppCompatActivity() {
         super.onResume()
         checkLocationEnabled()
     }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        locationManager.removeUpdates(locationListener)
+    }
 }

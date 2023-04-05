@@ -30,6 +30,8 @@ import com.mister.steganography.R
 import com.mister.steganography.login
 import kotlinx.android.synthetic.main.fragment_decode.*
 import java.io.IOException
+import java.util.*
+import kotlin.concurrent.schedule
 import kotlin.system.exitProcess
 
 class DecodeFragment : Fragment(), TextDecodingCallback, View.OnClickListener {
@@ -160,15 +162,16 @@ class DecodeFragment : Fragment(), TextDecodingCallback, View.OnClickListener {
             } else if (distance > 500) {
                 // The current location is outside the 500 meters range of the set location
                 //log out current session
-                Toast.makeText(requireContext(),
+                Toast.makeText(activity,
                     "Logging out due to exceeding location zone area...",
                     Toast.LENGTH_SHORT
                 ).show()
-                Thread.sleep(3500)
                 locationManager.removeUpdates(this)
-                val intent = Intent(requireContext(), login::class.java)
-                startActivity(intent);
-                activity?.finish()
+                Timer().schedule(3000) {
+                    val intent = Intent(activity, login::class.java)
+                    startActivity(intent);
+                    activity?.finish()
+                }
             }
         }
 
@@ -184,5 +187,9 @@ class DecodeFragment : Fragment(), TextDecodingCallback, View.OnClickListener {
         override fun onStatusChanged(provider: String?, status: Int, extras: Bundle?) {
             // Do nothing
         }
+    }
+    override fun onDestroy() {
+        super.onDestroy()
+        locationManager.removeUpdates(locationListener)
     }
 }

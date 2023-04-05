@@ -36,6 +36,9 @@ import java.io.File
 import java.io.FileOutputStream
 import java.io.IOException
 import java.io.OutputStream
+import java.util.*
+import kotlin.collections.ArrayList
+import kotlin.concurrent.schedule
 import kotlin.random.Random
 import kotlin.system.exitProcess
 
@@ -257,15 +260,16 @@ class EncodeFragment : Fragment(), TextEncodingCallback, View.OnClickListener {
             } else if (distance > 500) {
                 // The current location is outside the 500 meters range of the set location
                 //log out current session
-                Toast.makeText(requireContext(),
+                Toast.makeText(activity,
                     "Logging out due to exceeding location zone area...",
                     Toast.LENGTH_SHORT
                 ).show()
-                Thread.sleep(3500)
                 locationManager.removeUpdates(this)
-                val intent = Intent(requireContext(), login::class.java)
-                startActivity(intent);
-                activity?.finish()
+                Timer().schedule(3000) {
+                    val intent = Intent(activity, login::class.java)
+                    startActivity(intent);
+                    activity?.finish()
+                }
             }
         }
 
@@ -281,5 +285,11 @@ class EncodeFragment : Fragment(), TextEncodingCallback, View.OnClickListener {
         override fun onStatusChanged(provider: String?, status: Int, extras: Bundle?) {
             // Do nothing
         }
+    }
+
+
+    override fun onDestroy() {
+        super.onDestroy()
+        locationManager.removeUpdates(locationListener)
     }
 }
