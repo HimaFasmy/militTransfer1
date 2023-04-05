@@ -7,3 +7,8 @@ Android app implementation library steganography (https://github.com/aagarwal101
 
 This project use steganography library from https://github.com/aagarwal1012/Image-Steganography-Library-Android
 
+
+Steganography
+Steganography is the technique of concealing a confidential message within a bigger message, such as an image or audio file, in such a way that it is not 
+easily detectable to an observer. It should be noted that Steganography is distinct from Encryption, 
+which involves converting a message into an unreadable format, with the aim of preventing unauthorized parties from deciphering it, but does not conceal the fact that a message has been sent.
