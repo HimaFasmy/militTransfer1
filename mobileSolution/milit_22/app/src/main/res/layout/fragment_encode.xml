@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="#000000"
+    android:layout_height="match_parent"
+    tools:context=".fragment.EncodeFragment">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:layout_editor_absoluteX="66dp"
+            tools:layout_editor_absoluteY="47dp">
+            <ImageView
+                android:id="@+id/img_encript"
+                android:layout_width="match_parent"
+                android:layout_height="270dp"
+                android:background="#000000"/>
+            <Button
+                android:id="@+id/btn_openimage"
+                android:layout_width="293dp"
+                android:layout_height="50dp"
+                android:layout_below="@+id/img_encript"
+                android:background="@drawable/getstarted"
+                android:fontFamily="@font/fira_code_bold"
+                android:textColor="#006600"
+                android:layout_marginTop="30dp"
+                android:layout_centerInParent="true"
+                android:text="Choose Image" />
+            <EditText
+                android:inputType="numberPassword"
+                android:id="@+id/edittext_key"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/btn_openimage"
+                android:fontFamily="@font/fira_code_light"
+                android:layout_marginTop="10dp"
+                android:hint="Input Secret Key"
+                android:layout_centerInParent="true"
+                android:text=""
+                android:textColor="@color/textcolor"
+                android:textColorHint="#808080"/>
+
+            <EditText
+                android:inputType="text"
+                android:id="@+id/edittext_message"
+                android:layout_width="350dp"
+                android:layout_height="130dp"
+                android:layout_below="@+id/edittext_key"
+                android:background="@drawable/message_box"
+                android:layout_marginTop="10dp"
+                android:hint="Input Message"
+                android:fontFamily="@font/fira_code_light"
+                android:textAlignment="center"
+                android:gravity="center"
+                android:layout_centerInParent="true"
+                android:text=""
+                android:textColor="@color/textcolor"
+                android:textColorHint="#808080"/>
+            <Button
+                android:id="@+id/btn_encode"
+                android:layout_width="300dp"
+                android:layout_height="60dp"
+                android:layout_below="@+id/edittext_message"
+                android:backgroundTint="#006600"
+                android:textColor="@color/textcolor"
+                android:fontFamily="@font/fira_code_bold"
+                android:layout_marginHorizontal="40dp"
+                android:layout_marginTop="15dp"
+                android:layout_centerInParent="true"
+                android:text="Encode" />
+            <Button
+                android:id="@+id/btn_save"
+                android:layout_width="293dp"
+                android:layout_height="50dp"
+                android:textColor="#006600"
+                android:layout_below="@+id/btn_encode"
+                android:background="@drawable/getstarted"
+                android:fontFamily="@font/fira_code_bold"
+                android:layout_marginHorizontal="40dp"
+                android:layout_marginTop="10dp"
+                android:layout_centerInParent="true"
+                android:text="Save" />
+        </RelativeLayout>
+    </ScrollView>
+</FrameLayout>
