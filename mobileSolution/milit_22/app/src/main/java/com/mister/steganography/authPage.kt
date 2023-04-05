@@ -21,13 +21,11 @@ class authPage : AppCompatActivity() {
         btnsignup.setOnClickListener{
             val intent = Intent(this, signup::class.java)
             startActivity(intent)
-            finish()
         }
 
         btnlogin.setOnClickListener{
             val intent = Intent(this, login::class.java)
             startActivity(intent)
-            finish()
         }
 
     }
