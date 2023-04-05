@@ -9,6 +9,7 @@ import android.widget.Button
 class aboutPage : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
 
+
         //hide status bar
         window.setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN)
 

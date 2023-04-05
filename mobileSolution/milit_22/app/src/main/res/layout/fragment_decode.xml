@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#263238"
+    android:background="#000000"
     tools:context=".fragment.EncodeFragment">
     <ScrollView
         android:layout_width="match_parent"
@@ -15,50 +15,57 @@
                 android:id="@+id/image_decode"
                 android:layout_width="match_parent"
                 android:layout_height="270dp"
-                android:background="@android:color/black"/>
+                android:background="#808080"/>
+
             <Button
                 android:id="@+id/button_openimage_decode"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="#cfd8dc"
+                android:layout_width="293dp"
+                android:layout_height="50dp"
                 android:layout_below="@+id/image_decode"
-                android:layout_marginHorizontal="40dp"
-                android:layout_marginTop="10dp"
-                android:text="Choose Image"/>
+                android:layout_marginTop="30dp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/getstarted"
+                android:text="Choose Image"
+                android:textColor="#006600" />
             <EditText
                 android:inputType="numberPassword"
                 android:id="@+id/edittext_key_decode"
-                android:layout_width="match_parent"
+                android:layout_width="300dp"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/button_openimage_decode"
-                android:layout_marginHorizontal="40dp"
                 android:layout_marginTop="10dp"
+                android:layout_centerInParent="true"
                 android:hint="Input Secret Key"
                 android:textColor="@color/textcolor"
-                android:textColorHint="@color/hintTrextColor"
-                />
-            <TextView
-                android:inputType="text"
-                android:id="@+id/edittext_message_decode"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textSize="16sp"
-                android:layout_below="@+id/edittext_key_decode"
-                android:layout_marginHorizontal="40dp"
-                android:layout_marginTop="15dp"
-                android:hint="Message"
-                android:textColor="@color/textcolor"
-                android:textColorHint="@color/hintTrextColor"
+                android:textColorHint="#808080"
                 />
             <Button
                 android:id="@+id/btn_decode"
-                android:layout_width="match_parent"
-                android:background="#cfd8dc"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/edittext_message_decode"
-                android:layout_marginHorizontal="40dp"
+                android:layout_width="300dp"
+                android:layout_height="60dp"
+                android:backgroundTint="#006600"
+                android:textColor="#F4F1F1"
+                android:layout_below="@+id/edittext_key_decode"
                 android:layout_marginTop="10dp"
+                android:layout_centerInParent="true"
                 android:text="Decode" />
+
+            <TextView
+                android:id="@+id/edittext_message_decode"
+                android:layout_width="350dp"
+                android:layout_height="150dp"
+                android:layout_below="@+id/btn_decode"
+                android:layout_centerInParent="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/message_box"
+                android:hint="Message"
+                android:textAlignment="center"
+                android:gravity="center"
+                android:inputType="text"
+                android:textColor="@color/textcolor"
+                android:textColorHint="#808080"
+                android:textSize="16sp" />
         </RelativeLayout>
     </ScrollView>
 </FrameLayout>
