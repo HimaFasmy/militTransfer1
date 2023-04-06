@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Steganography</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="username">Username</string>
+    <string name="verify">Verify</string>
+    <string name="enter_password">Enter password</string>
+    <string name="aboutUs">CTRL C + CTRL V\n
+        We are a group of dedicated individuals with a passion for technology and security.
+        \n\nOur goal is to create innovative solutions that help users protect their information and communicate securely.\n\n
+        militTransfer is an Image Steganographic software, which allows users to conceal secret messages within images. This powerful tool can be used for a variety of purposes,
+        including secure communication, data protection and so on.\n\n
+        Thank you for choosing us, and we look forward to serving you!</string>
+    <string name="aboutus">About Us</string>
+    <string name="decode">DeCode</string>
+    <string name="encode">Encode</string>
+</resources>

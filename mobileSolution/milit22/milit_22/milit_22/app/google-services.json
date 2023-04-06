@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "209031101790",
+    "project_id": "steganography-56b04",
+    "storage_bucket": "steganography-56b04.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:209031101790:android:4eb37839569f36eb43e3cf",
+        "android_client_info": {
+          "package_name": "com.mister.steganography"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "209031101790-j8q4hhrfu0c666dm06t15rtmu27cck7c.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAXTPrrVO_AoCfN-2Cx8Gumx99Gah0u_DI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "209031101790-j8q4hhrfu0c666dm06t15rtmu27cck7c.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
