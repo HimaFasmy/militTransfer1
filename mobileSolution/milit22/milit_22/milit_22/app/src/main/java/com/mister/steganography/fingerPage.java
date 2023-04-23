@@ -73,10 +73,12 @@ public class fingerPage extends AppCompatActivity {
                 if (decode) {
                     Intent intent = new Intent(fingerPage.this,Decodee.class);
                     startActivity(intent);
+                    finish();
                 }
                 else {
                     Intent intent = new Intent(fingerPage.this,MainActivity.class);
                     startActivity(intent);
+                    finish();
                 }
             }
 
