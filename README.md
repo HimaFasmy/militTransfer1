@@ -1,2 +1,2 @@
 # militTransfer1
-SDGP CS-22
+SDGP CS-22 Group Project
